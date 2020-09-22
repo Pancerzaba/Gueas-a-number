@@ -9,7 +9,7 @@ const StartGameScreen = props => {
 
     const [enteredValue, setEnteredValue] = useState('');
     const [confirmed, setConfirmed] = useState(false);
-    const [selectrdNumber, setSelectedNumber] = useState();
+    const [selectedNumber, setSelectedNumber] = useState();
 
     const numberInputHandler = inputText => {
         setEnteredValue(inputText.replace(/[^0-9]/g, ''));
@@ -40,8 +40,8 @@ const StartGameScreen = props => {
         confirmedOutput = 
         <Card style={styles.summaryContainer}>
         <Text>You selected</Text>
-        <NumberContainer>{selectrdNumber}</NumberContainer>
-       <Button title="START GAME"/>
+        <NumberContainer>{selectedNumber}</NumberContainer>
+       <Button title="START GAME" onPress={() => props.onStartGame(selectedNumber)}/>
         </Card>
     }
 
@@ -62,7 +62,7 @@ const StartGameScreen = props => {
                 {confirmedOutput}
             </View>
         </TouchableWithoutFeedback>
-    )
+    );
 };
 
 const styles = StyleSheet.create({
