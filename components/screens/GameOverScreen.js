@@ -1,18 +1,29 @@
 import React from 'react';
 import { Text, StyleSheet, View, Button, Image } from 'react-native';
+import Colors from '../../constans/Colors';
+//import BodyText from '../BodyText'
 
 
 const GameOverScreen = props => {
     return (
         <View style={styles.screen}>
-            <Text>The Game is Over !</Text>
+            <Text style={styles.bold}>The Game is Over !</Text>
             <View style={styles.imageContainer}>
                 <Image source={require('../../assets/success.png')} style={styles.image} resizeMode="cover" />
             </View>
-            <Text>Number of rounds: {props.roundsNumber}</Text>
-            <Text>Number was: {props.userNumber}</Text>
+            <View style={styles.resultContainer}>
+                <Text style={styles.resultText}>
+                    Your phone needed 
+                    <Text style={styles.highlight}>
+                        {props.roundsNumber}
+                    </Text> rounds to guess rounds Number
+                    <Text style={styles.highlight}>
+                        {props.userNumber}
+                    </Text>.
+            </Text>
+            </View>
             <Button title="NEW GAME" onPress={props.onRestart} />
-        </View>);
+        </View >);
 }
 const styles = StyleSheet.create({
     screen: {
@@ -32,6 +43,19 @@ const styles = StyleSheet.create({
         height: 300,
         overflow: 'hidden',
         marginVertical: 30
+    },
+    highlight: {
+        color: Colors.primary,
+        fontWeight: 'bold'
+    },
+
+    resultText: {
+        textAlign: 'center',
+        fontSize: 20
+    },
+    resultContainer: {
+        marginHorizontal: 30,
+        marginVertical: 15
     }
 });
 

@@ -4,7 +4,7 @@ import Card from '../Card';
 import Colors from '../../constans/Colors';
 import NumberContainer from '../NumberContainer';
 import Input from '../Input';
-import BodyText from '../bodyText';
+//import BodyText from '../BodyText';
 
 
 const StartGameScreen = props => {
@@ -100,7 +100,12 @@ const styles = StyleSheet.create({
     summaryContainer: {
         marginTop: 20,
         alignItems: 'center'
+    },
+    bold: {
+       
+        fontWeight: 'bold'
     }
+
 });
 
 export default StartGameScreen;

@@ -5,6 +5,7 @@ const BodyText = props =><Text style={styles.body}>{props.childern}</Text>
 
 const styles= StyleSheet.create({
     body: {
-        fontFamily: 'open-sans-bold'
+        fontFamily: 'Cochin',
+        fontWeight: 'bold'
     }
 })
