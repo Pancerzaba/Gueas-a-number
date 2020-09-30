@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     list:{
-        flex: 1,
+        flexGrow: 1,
         alignItems: 'center',
         justifyContent: 'flex-end'
     },
