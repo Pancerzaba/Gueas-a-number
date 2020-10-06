@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, StyleSheet, View, Button, Image, Dimensions, ScrollView } from 'react-native';
 import Colors from '../../constans/Colors';
-import BodyText from '../BodyText'
-import MainButton from '../MainButton'
+import BodyText from '../BodyText';
+import MainButton from '../MainButton';
 
 
 const GameOverScreen = props => {
